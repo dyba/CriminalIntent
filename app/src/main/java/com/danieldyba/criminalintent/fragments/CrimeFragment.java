@@ -14,10 +14,7 @@ import android.widget.EditText;
 
 import com.danieldyba.criminalintent.R;
 import com.danieldyba.criminalintent.models.Crime;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import com.danieldyba.criminalintent.utils.DateUtils;
 
 
 public class CrimeFragment extends Fragment {
@@ -67,7 +64,7 @@ public class CrimeFragment extends Fragment {
 
         mDateButton = (Button)v.findViewById(R.id.crime_date);
 
-        String dateString = formatDateAsDateInstance(mCrime.getDate());
+        String dateString = DateUtils.formatDateAsFriendlyDateInstance(mCrime.getDate());
 
         mDateButton.setText(dateString);
         mDateButton.setEnabled(false);
@@ -80,12 +77,6 @@ public class CrimeFragment extends Fragment {
         });
 
         return v;
-    }
-
-    private String formatDateAsDateInstance(Date d) {
-        String formatString = "EEEE, LLL F, yyyy";
-        SimpleDateFormat sdf = new SimpleDateFormat(formatString, Locale.US);
-        return sdf.format(d);
     }
 
 }
