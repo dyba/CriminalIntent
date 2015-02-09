@@ -1,4 +1,4 @@
-package com.danieldyba.criminalintent;
+package com.danieldyba.criminalintent.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+
+import com.danieldyba.criminalintent.R;
+import com.danieldyba.criminalintent.models.Crime;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
